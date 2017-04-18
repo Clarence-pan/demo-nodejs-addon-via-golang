@@ -18,4 +18,4 @@ before_script:
   - docker ps -a
 
 script:
-  - docker run clarencep/demo-nodejs-addon-via-golang node test.js
+  - docker run clarencep/demo-nodejs-addon-via-golang make test

@@ -1,4 +1,4 @@
-// #include "calculator.h"
+#include "calculator.h"
 #include <node.h>
 
 namespace calc {
