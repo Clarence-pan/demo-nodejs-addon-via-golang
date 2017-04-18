@@ -1,8 +1,21 @@
+branches:
+  only:
+    - master
+
 sudo: required
+
+language: python
 
 services:
   - docker
 
-script:
+before_script:
+  - python --version
+  - docker version
+  - docker ps -a
   - docker build -t clarencep/demo-nodejs-addon-via-golang .
+  - docker images
+  - docker ps -a
+
+script:
   - docker run clarencep/demo-nodejs-addon-via-golang node test.js
