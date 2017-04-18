@@ -6,7 +6,7 @@ WORKDIR /usr/src/node-calculator
 
 ENV NODE_VERSION 7.9.0
 
-RUN buildDeps="gcc libc6-dev make wget python" \
+RUN buildDeps="gcc libc6-dev make wget python xz-utils" \
     && apt-get update \
     && apt-get install -y $buildDeps\
     && wget -O nodejs.tar.xz "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
