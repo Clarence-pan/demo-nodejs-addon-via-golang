@@ -2,6 +2,8 @@ FROM golang
 
 COPY . /usr/src/node-calculator
 
+WORKDIR /usr/src/node-calculator
+
 ENV NODE_VERSION 7.9.0
 
 RUN buildDeps="gcc libc6-dev make wget python" \
@@ -18,5 +20,5 @@ RUN buildDeps="gcc libc6-dev make wget python" \
     && echo OK
 #    && apt-get purge -y --auto-remove $buildDeps
 
-ENTRYPOINT bash
+CMD bash
 

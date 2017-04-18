@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t clarencep/demo-nodejs-addon-via-golang .
+  - docker run clarencep/demo-nodejs-addon-via-golang node test.js
